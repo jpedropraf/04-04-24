@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        let red = document.querySelectorAll('.red');
+        console.log(red);
+
+        let size = '400px'
+        // for para percorrer o array red
+
+        //função de callback
+
+        // primeiro é o nome do elemento e o segundo é o       numero do elemento
+
+        red.forEach((element, index) => {
+        
+            element.style.background = 'red';
+            element.style.height = size;
+            element.style.width = size;
+            element.style.borderRadius = "100%";
+            element.style.marginBottom = "10px";
+            element.style.transition ='all 2s linear'
+            element.innerHTML = '<marquee><h1>'+ index + '</h1></marquee>' 
+            
+            element.addEventListener('mouseover', ()=> {
+                element.style.width = '500px';
+            } );
+
+            element.addEventListener('mouseleave', ()=> {
+                element.style.width = '500px';
+            } );
+
+            element.addEventListener('click', ()=> {
+                alert(index +" a cor mudou" );
+                element.style.backgroundColor = 'purple';
+                element.appendChild("2050 clicks")
+            } );
+
+
+        }
+        );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
